@@ -375,49 +375,19 @@ void cifralcd(int cifr)                                    //отправка двузначног
 	}
 int main(void)
 {
+	_delay_ms(1000);
 	DDRB=0x00;
 	DDRA = 0XFF;
 	uint8_t last=PINB;
     initc();
 	displaysettings(1,0,0);
     clearLCD();
-	
-	writecomande(0x40,0);
-	writecomande(0xFF,1);
-	writecomande(0xFF,1);
-	writecomande(0xFF,1);
-	writecomande(0xF0,1);
-	writecomande(0xFF,1);
-	writecomande(0xFF,1);
-	writecomande(0xFF,1);
-	writecomande(0x00,1);
-	writecomande(0x00,1);
-	writecomande(0x00,1);
-	writecomande(0x00,1);
-	writecomande(0x00,1);
-	writecomande(0x00,1);
-	writecomande(0x00,1);
-	writecomande(0x04,1);
-		writecomande(0xFF,1);
-		writecomande(0xFF,1);
-		writecomande(0xFF,1);
-		writecomande(0xFF,1);
-		writecomande(0xF0,1);
-		writecomande(0xFF,1);
-		writecomande(0xFF,1);
-			writecomande(0x10,1);
-			writecomande(0x00,1);
-			writecomande(0x05,1);
-			writecomande(0x40,1);
-			writecomande(0x00,1);
-			writecomande(0x00,1);
-			writecomande(0x00,1);
-			writecomande(0x04,1);
+
 		
     int count=50;
     while (1)
 	{	
-		/*
+		
 		
 			if (PINB==0x00)
 			{
@@ -535,7 +505,7 @@ int main(void)
 		{
 			count=0;
 			cifralcd(count);		
-		}*/
+		}
 	}
 }
 
